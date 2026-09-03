@@ -1,0 +1,22 @@
+name: Pipeline
+
+on:
+  push:
+    branches:
+      - ???
+  workflow_dispatch:
+
+jobs:
+  integration-delivery:
+    runs-on: ubuntu-22.04
+    container:
+      image: node
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: ???
+
+      - name: Build website
+        run: ???
